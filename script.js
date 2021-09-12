@@ -15,7 +15,6 @@ drawCardFromNewDeck();
 async function drawTwoCardsFromNewDeck() {
   let deckID, cardOne, cardTwo;
   const response = await axios.get(`${BASE_API_URL}new/draw/?count=1`);
-  console.log(response);
   // response.data sample:
   // {
   //   "success": true,
@@ -64,7 +63,6 @@ $button.on("click", async function () {
   let angle = Math.random() * 90 - 45;
   let randomX = Math.random() * 40 - 20;
   let randomY = Math.random() * 40 - 20;
-  console.log(cardSrc, deckIDTwo);
   $cardArea.append(
     $(`<img>`, {
       src: cardSrc,
